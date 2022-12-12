@@ -138,7 +138,6 @@ header {
 
 #header.big-header {
   height: 40vh;
-  position: unset;
 }
 
 #header.little-header {
