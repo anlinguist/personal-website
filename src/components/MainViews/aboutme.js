@@ -21,7 +21,7 @@ function AboutMe() {
                 <li>Azure</li>
                 <li>AWS</li>
             </ul>
-            <p>In my spare time, I like to learn new technologies, work on personal side projects, play videogames, travel, and workout. I'm currently training for a Half Ironman, which I hope to do before I turn 30 in June 2022.</p>
+            <p>In my spare time, I like to learn new technologies, work on personal side projects, play videogames, travel, and workout. I did a Half Ironman last year and I'm currently training for a full Ironman.</p>
         </div>
     );
 }
