@@ -8,11 +8,9 @@ import {
 import Header from "./components/Header/Header";
 import AboutMe from './components/MainViews/aboutme';
 import Portfolio from './components/MainViews/portfolio';
-import Blog from './components/MainViews/blog';
 import Contact from './components/MainViews/contact';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import andrew_photo from './assets/andrew.png'
-import BlogPost from './components/Blog/blog_post';
 
 
 class App extends React.Component {
@@ -23,20 +21,6 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    // need to get all blog posts and pass them to the blog component
-    this.getBlogPosts();
-  }
-  
-  getBlogPosts = () => {
-    var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    fetch("https://blog.anlinguist.com/wp-json/wp/v2/posts", requestOptions)
-      .then(response => response.json())
-      .then(parsedJSON => this.setState({blog_posts: parsedJSON}))
-      .catch(error => console.log('error', error));
   }
 
   handleScroll = () => {
@@ -69,8 +53,6 @@ class App extends React.Component {
                 <Route path="/" element={<AboutMe />} />
                 <Route path="/about-me" element={<AboutMe />} />
                 <Route path="/portfolio" element={<Portfolio/>} />
-                <Route path='/blog' element={<Blog dataObject={this.state.blog_posts}/>} />
-                <Route path='/blog/:slug' element={<BlogPost dataObject={this.state.blog_posts}/>} />
                 <Route path="/contact" element={<Contact/>} />
               </Routes>
             </main>

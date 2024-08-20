@@ -26,7 +26,6 @@ class NavMenu extends React.Component {
                 <ul id="menu" className={this.state.showMenu}>
                     <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/"><h2>About Me</h2></NavLink>
                     <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/portfolio"><h2>Portfolio</h2></NavLink>
-                    <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/blog"><h2>Blog</h2></NavLink>
                     <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/contact"><h2>Contact</h2></NavLink>
                 </ul>
                 <nav role='navigation'>

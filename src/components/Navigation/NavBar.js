@@ -7,7 +7,6 @@ function NavBar(props) {
         <div id="navitems">
             <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/"><h2>About Me</h2></NavLink>
             <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/portfolio"><h2>Portfolio</h2></NavLink>
-            <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/blog"><h2>Blog</h2></NavLink>
             <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/contact"><h2>Contact</h2></NavLink>
         </div>
     </div>
