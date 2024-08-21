@@ -1,7 +1,7 @@
 import andrew_photo from '../../assets/andrew.png'
-import NavBar from '../Navigation/NavBar';
-import NavMenu from '../Navigation/NavMenu';
-function Header(props) {
+import NavBar from '../Navigation/NavBar.tsx';
+import NavMenu from '../Navigation/NavMenu.tsx';
+function Header(props: any) {
     return (
     <header id="header" className={props.headerHeight}>
         <div id="header-left">

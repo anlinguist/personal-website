@@ -11,7 +11,8 @@ function Portfolio() {
                 <li><a rel="noreferrer" className="linkonpage" target="_blank" href="https://www.getreadefine.com">Readefine</a> <a href={"https://github.com/anlinguist/readefine-extension"} className='linkonpage' rel="noreferrer" target="_blank">(source)</a></li>
                 <p>Readefine is a browser extension that simplifies language on the internet. I designed and built all of Readefine including the client extensions (Chrome, Safari (MacOS and iOS), Firefox, and Edge), the Readefine backend, the database, and <a rel="noreferrer" className="linkonpage" href="https://www.getreadefine.com" target="_blank">the Readefine landing page</a>, <a rel="noreferrer" className="linkonpage" href="https://app.getreadefine.com" target="_blank">the Readefine web app client</a>.</p>
                 <p>Check out a demo here:</p>
-                <div className="loomcontainer"><iframe className="loomiframe" title="loomiframe" src="https://www.loom.com/embed/0448ee72403441688f908341651996fe" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe></div>
+                {/* @ts-ignore  */}
+                <div className="loomcontainer"><iframe className="loomiframe" title="loomiframe" src="https://www.loom.com/embed/0448ee72403441688f908341651996fe" frameBorder="0" webkitallowfullscreen={true} mozallowfullscreen="true" allowFullScreen></iframe></div>
                 <p>I used a number of technologies to build Readefine including JavaScript, HTML, CSS, React, Express, Swift, Docker, Firebase (for authentication), Firestore (NoSQL database), and GCP.</p>
                 <p></p>
                 <li><a rel="noreferrer" className="linkonpage" target="_blank" href="https://www.numu-know.com">Numu-Know</a></li>

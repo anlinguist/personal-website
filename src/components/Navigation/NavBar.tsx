@@ -1,7 +1,6 @@
-import React from 'react';
 import { NavLink } from "react-router-dom";
 
-function NavBar(props) {
+function NavBar(props: any) {
     return (
     <div id="navigationbar" className={props.headerHeight}>
         <div id="navitems">
