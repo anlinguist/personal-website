@@ -18,12 +18,10 @@ function BlogPost({ blogPosts }: any) {
     const updatePage = async () => {
         let slug = window.location.pathname.replace("/blog/", "")
         let title = false;
-        let id = false;
         let blogData: any = false;
         for (const item of blogPosts) {
             if (item.slug.current === slug) {
                 title = item.title
-                id = item._id
                 blogData = item
                 break;
             }
