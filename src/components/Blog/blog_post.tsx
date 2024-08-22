@@ -42,6 +42,16 @@ function BlogPost({ blogPosts }: any) {
             image: (props: any) => {
                 return (<img className='blog-post-image' src={urlFor(props.value).url()} />)
             },
+        },
+        marks: {
+            customLink: ({ children, value }: any) => {
+                const { href, class: className } = value;
+                return (
+                    <a href={href} className={className}>
+                        {children}
+                    </a>
+                );
+            }
         }
     }
 
