@@ -13,7 +13,7 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import andrew_photo from './assets/andrew.png'
 import Blog from './components/MainViews/blog.tsx';
 import BlogPost from './components/Blog/blog_post.tsx';
-
+import { client } from './sanityClient.ts';
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState('big-header');
@@ -21,20 +21,14 @@ function App() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    // getBlogPosts();
+    client
+      .fetch('*[_type == "blogPost"]{...}')
+      .then((data) => {
+        setBlogPosts(data)
+      })
+      .catch(console.error);
   }, []);
 
-  // @ts-ignore
-  const getBlogPosts = async () => {
-    var requestOptions: any = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-
-    let raw = await fetch("https://blog.anlinguist.com/wp-json/wp/v2/posts", requestOptions)
-    let response = await raw.json();
-    setBlogPosts(response);
-  }
 
   const handleScroll = () => {
     if (document.body.scrollTop > 3 || 
@@ -60,8 +54,8 @@ function App() {
             <Routes>
               <Route path="/" element={<AboutMe />} />
               <Route path="/about-me" element={<AboutMe />} />
-              <Route path='/blog' element={<Blog dataObject={blogPosts}/>} />
-              <Route path='/blog/:slug' element={<BlogPost dataObject={blogPosts}/>} />
+              <Route path='/blog' element={<Blog blogPosts={blogPosts}/>} />
+              <Route path='/blog/:slug' element={<BlogPost blogPosts={blogPosts}/>} />
               <Route path="/portfolio" element={<Portfolio/>} />
               <Route path="/contact" element={<Contact/>} />
             </Routes>

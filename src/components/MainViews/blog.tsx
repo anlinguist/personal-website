@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import PostCard from '../Blog/post_card';
 import PWLoader from '../Random/loader.tsx';
+import { urlFor } from '../../sanityClient.ts';
 
 function Blog({ blogPosts }: any) {
     const [loaded, setLoaded] = useState('');
@@ -24,7 +25,7 @@ function Blog({ blogPosts }: any) {
                     blogPosts &&
                     blogPosts.length > 0 &&
                     blogPosts.map((post: any) => (
-                        <PostCard title={post.title.rendered} img={post.jetpack_featured_media_url} slug={post.slug} key={post.id.toString()} />
+                        <PostCard title={post.title} img={urlFor(post.thumbnail)} slug={post.slug?.current} key={post._id.toString()} />
                     ))
                 }
             </div>
