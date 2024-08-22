@@ -639,3 +639,15 @@ code {
   height: auto;
   max-width: 100%;
 }
+
+#blog-post-container a:hover {
+  background-color: var(--main-green);
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+#blog-post-container a {
+  color: var(--main-green);
+  text-decoration: underline;
+}
