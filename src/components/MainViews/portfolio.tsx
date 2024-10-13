@@ -15,6 +15,11 @@ function Portfolio() {
                 <div className="loomcontainer"><iframe className="loomiframe" title="loomiframe" src="https://www.loom.com/embed/0448ee72403441688f908341651996fe" frameBorder="0" webkitallowfullscreen={true} mozallowfullscreen="true" allowFullScreen></iframe></div>
                 <p>I used a number of technologies to build Readefine including JavaScript, HTML, CSS, React, Express, Swift, Docker, Firebase (for authentication), Firestore (NoSQL database), and GCP.</p>
                 <p></p>
+                
+                {/* mail frames */}
+                <li><a rel="noreferrer" className="linkonpage" target="_blank" href="https://www.mailframes.com">MailFrames</a></li>
+                <p>Mail Frames is a web app that allows users to design and build email templates using MJML and AI which generates the MJML. Users can sign in to use AI to generate the MJML as well as save templates. Using the Mail Frames chrome extension, you can directly place those emails into email clients like gmail or marketing automation platforms like Iterable or Klaviyo.</p>
+                <p>Mail Frames is built with React (typescript with Vite), Express, and Firebase. I used Firebase for authentication and Firestore for the database. I built my own node.js Express server for AI and server sided MJML to HTML conversion.</p>
                 <li><a rel="noreferrer" className="linkonpage" target="_blank" href="https://www.numu-know.com">Numu-Know</a></li>
                 <p>Numu-Know is a web app that renders Paiute (a Native American language) texts. Numu-Know allows anyone to see community documents. Anyone can sign into Numu-Know and create and manage their own (public) documents. Numu-Know is designed to help Paiute learners quickly access additional information about a word by clicking on the word, which shows word attributes like part of speech or gloss. In addition, users can opt into email notifications about new stories - I used Klaviyo to build these marketing flows.</p>
                 <li><a rel="noreferrer" className="linkonpage" target="_blank" href="https://biblia-sacra-2q23fvkbda-uc.a.run.app/">Bibliacra</a></li>

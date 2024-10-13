@@ -8,7 +8,6 @@ function Header(props: any) {
           <img id="self-photo" alt="Andrew Nelson" src={andrew_photo}/>
           <div id="namearea">
               <h1 id="site-title">Andrew Nelson</h1>
-              <h3 id="sub-title">Software Engineer</h3>
           </div>
         </div>
         <NavBar></NavBar>
