@@ -1,3 +1,14 @@
+html, body, #root, .App {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --main-green: #27462C;
   --light-green: #9BAF9E;
@@ -22,16 +33,9 @@ header {
   height: 40vh;
 }
 
-#main.big-header {
-  margin-top: 40vh;
-}
-
-#main.little-header {
-  margin-top: 22vh;
-}
-
 #header {
   transition: 0.4s;
+  position: relative;
 }
 
 #header-left {
@@ -142,24 +146,20 @@ header {
 
 #header.little-header {
   height: 22vh;
-  position: fixed;
-  top: 0;
 }
 
 main {
-  position: absolute;
   margin: auto;
-  margin-bottom: 60px;
   font-size: 22px;
   line-height: 1.4;
-  max-width: 800px;
   padding-left: 40px;
   padding-right: 40px;
   color: var(--main-green);
-  transition: .4s;
-  top: 0;
-  left: 0;
-  right: 0;
+  flex: 1;
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
 }
 
 a.linkonpage:hover {
@@ -188,7 +188,7 @@ a.linkonpage:hover {
   position: relative;
   padding-bottom: 62.5%;
   height: 0;
-  z-index: 0;
+  z-index: 11
 }
 
 .loomiframe {
@@ -650,4 +650,28 @@ code {
 #blog-post-container a {
   color: var(--main-green);
   text-decoration: underline;
+}
+
+#portfolio, #about, #blog, #contact {
+  max-width: 800px;
+  height: fit-content;
+  margin-bottom: 40px;
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Behind all other content */
+}
+
+
+.spiders {
+  z-index: -1;
+}
+
+.source-badge {
+  cursor: pointer !important;
 }
