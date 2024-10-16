@@ -15,7 +15,7 @@ function WebsiteRoutes({blogPosts}: any) {
     const [headerHeight, setHeaderHeight] = useState('big-header');
 
     const handleScroll = (e: any) => {
-        if (e.target.scrollTop > 3) {
+        if (e.target.scrollTop > 0) {
             setHeaderHeight('little-header');
         } else {
             setHeaderHeight('big-header');

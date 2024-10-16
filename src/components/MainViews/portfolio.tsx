@@ -12,7 +12,18 @@ export type PortfolioItemType = {
     },
     source?: string,
     description: string,
-    photo: JSXPhoto | ImagePhoto | null
+    photo: JSXPhoto | ImagePhoto | null,
+    techStack?: {
+        "Languages"?: string[],
+        "Libraries and Frameworks"?: string[],
+        "Databases"?: string[],
+        "Authentication"?: string[],
+        "Cloud Deployment"?: string[],
+        "Marketing Automations"?: string[],
+        "Payment Processing"?: string[],
+        "Build Tools"?: string[],
+        "Other"? : string[]
+    }
 }
 
 // Define the types for the different photo options
@@ -37,11 +48,22 @@ function Portfolio() {
                 color: "#ffde00"
             },
             source: "https://github.com/anlinguist/readefine-extension",
-            description: "Readefine is a browser extension that simplifies language on the internet. I designed and built all of Readefine including the client extensions (Chrome, Safari (MacOS and iOS), Firefox, and Edge), the Readefine backend, the database, and the Readefine landing page.",
+            description: "Readefine is a browser extension that simplifies language on the internet. I designed and built all of Readefine including the client extensions (Chrome, Safari (MacOS and iOS), Firefox, and Edge), the Readefine backend, the database, and the Readefine web app.",
             photo: {
                 type: "jsx",
                 // @ts-ignore
                 jsx: <div className="loomcontainer"><iframe className="loomiframe" title="loomiframe" src="https://www.loom.com/embed/0448ee72403441688f908341651996fe" frameBorder="0" webkitallowfullscreen={true} mozallowfullscreen="true" allowFullScreen></iframe></div>
+            },
+            techStack: {
+                "Languages": ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Swift", "Scala"],
+                "Libraries and Frameworks": ["React.js", "Node.js", "Express.js", ""],
+                "Databases": ["Firestore", "NoSQL"],
+                "Authentication": ["Firebase Auth"],
+                "Cloud Deployment": ["Docker", "Github", "GCP", "Cloud Build", "Cloud Run"],
+                "Marketing Automations": ["Klaviyo"],
+                "Payment Processing": ["Stripe"],
+                "Build Tools": ["NPM", "Custom Build Script"],
+                "Other": ["Figma", "OpenAI"]
             }
         },
         {
@@ -55,19 +77,15 @@ function Portfolio() {
             photo: {
                 type: "image",
                 src: "https://mailframes.com/mflogo.svg"
-            }
-        },
-        {
-            title: "Numu-Know",
-            button: {
-                link: "https://www.numu-know.com",
-                text: "Check it out!",
-                color: "#788290"
             },
-            description: "Numu-Know is a web app that renders Paiute (a Native American language) texts. Numu-Know allows anyone to see community documents. Anyone can sign into Numu-Know and create and manage their own (public) documents. Numu-Know is designed to help Paiute learners quickly access additional information about a word by clicking on the word, which shows word attributes like part of speech or gloss. In addition, users can opt into email notifications about new stories - I used Klaviyo to build these marketing flows.",
-            photo: {
-                type: "image",
-                src: "/numu.png"
+            techStack: {
+                "Languages": ["TypeScript", "HTML", "CSS"],
+                "Libraries and Frameworks": ["React.js", "Node.js", "Express.js", "MJML", "Mantine"],
+                "Databases": ["Firestore", "NoSQL"],
+                "Authentication": ["Firebase Auth"],
+                "Cloud Deployment": ["Docker", "Github", "GCP", "Cloud Build", "Cloud Run"],
+                "Build Tools": ["NPM", "Custom Build Tools", "Rollup", "Vite", "PostCSS"],
+                "Other": ["Figma", "OpenAI"]
             }
         },
         {
@@ -77,10 +95,39 @@ function Portfolio() {
                 text: "Check it out!",
                 color: "#303030"
             },
-            description: "Biblacra is an app that renders Hebrew and Greek biblical texts. There are 3 frontend Bibliacra clients: a web app, an iOS app, and an android app (android is still in testing). I used React.js for the web app and intially used React Native to build the iOS version, but ultimately rewrote it in Swift - I'm still working on an Android version. The database is a NoSQL Firestore database. Users of Bibliacra can open various texts, click on a word, and see word attributes like part of speech or gloss. In addition, users can search for words and Bibliacra queries an Algolia full text search engine and renders the results. Finally, users can sign in and opt into emails and push notifications to receive daily reading exercises.",
+            description: "Biblacra renders Hebrew and Greek biblical texts. There are 3 frontend Bibliacra clients: a web app, an iOS app, and an android app (android is still in testing). I used React.js for the web app and intially used React Native to build the iOS version, but ultimately rewrote it in Swift - I'm still working on an Android version. The database is a NoSQL Firestore database. Users of Bibliacra can open various texts, click on a word, and see word attributes like part of speech or gloss. In addition, users can search for words and Bibliacra queries an Algolia full text search engine and renders the results. Finally, users can sign in and opt into emails and push notifications to receive daily reading exercises.",
             photo: {
                 type: "image",
                 src: "https://bibliacra.com/logo512.png"
+            },
+            techStack: {
+                "Languages": ["TypeScript", "HTML", "CSS", "Swift", "Python"],
+                "Libraries and Frameworks": ["React.js", "React Native (formerly)", "Node.js", "Express.js", "Starlette (formerly)"],
+                "Databases": ["Firestore", "NoSQL"],
+                "Authentication": ["Firebase Auth"],
+                "Cloud Deployment": ["Docker", "Github", "GCP", "Cloud Build", "Cloud Run"],
+                "Marketing Automations": ["Klaviyo"]
+            }
+        },
+        {
+            title: "Numu-Know",
+            button: {
+                link: "https://www.numu-know.com",
+                text: "Check it out!",
+                color: "#788290"
+            },
+            description: "Numu-Know renders Paiute (a Native American language) texts. Numu-Know allows anyone to see community documents. Anyone can sign into Numu-Know and create and manage their own (public) documents. Numu-Know is designed to help Paiute learners quickly access additional information about a word by clicking on the word, which shows word attributes like part of speech or gloss. In addition, users can opt into email notifications about new stories - I used Klaviyo to build these marketing flows.",
+            photo: {
+                type: "image",
+                src: "/numu.png"
+            },
+            techStack: {
+                "Languages": ["JavaScript", "TypeScript", "HTML", "CSS"],
+                "Libraries and Frameworks": ["React.js", "Node.js", "Express.js"],
+                "Databases": ["Firestore", "NoSQL"],
+                "Authentication": ["Firebase Auth"],
+                "Cloud Deployment": ["Docker", "Github", "GCP", "Cloud Build", "Cloud Run"],
+                "Marketing Automations": ["Klaviyo"]
             }
         },
         {
@@ -103,6 +150,7 @@ function Portfolio() {
                 <title>Andrew's Portfolio</title>
             </Helmet>
             <h2 className="section-titles">My Portfolio</h2>
+            <div className='portfolio-card-container'>
             {
                 portfolioData.map((item, index) => {
                     return <motion.div
@@ -119,11 +167,13 @@ function Portfolio() {
                       button={item.button}
                       description={item.description}
                       photo={item.photo}
+                      techStack={item.techStack}
                     />
                   </motion.div>
         
                 })
             }
+            </div>
         </div>
     );
 }
