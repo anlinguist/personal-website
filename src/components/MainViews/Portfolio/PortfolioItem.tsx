@@ -5,7 +5,7 @@ const fallbackImage = <Image src={"https://raw.githubusercontent.com/mantinedev/
 
 function PortfolioItem({ title, button, source, description, photo, techStack }: PortfolioItemType) {
     return (
-        <Card h={560} maw={450} m={"xl"} shadow="sm" padding="lg" radius="md" withBorder>
+        <Card h={620} maw={450} m={"xl"} shadow="sm" padding="lg" radius="md" withBorder>
             <Card.Section>
                 <AspectRatio h={265} ratio={1080 / 720} mx="auto">
                     {photo && photo.type === "image" ? (
