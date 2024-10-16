@@ -1,4 +1,4 @@
-import { Card, Image, Group, Text, Badge, Button, AspectRatio, Container, ScrollArea, Accordion } from '@mantine/core'
+import { Card, Image, Group, Text, Badge, Button, AspectRatio, Container, Accordion } from '@mantine/core'
 import { PortfolioItemType } from '../portfolio'
 
 const fallbackImage = <Image src={"https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png"} alt={"fallback-image"} />
