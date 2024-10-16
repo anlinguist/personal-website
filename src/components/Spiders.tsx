@@ -37,10 +37,10 @@ const Spiders = ({ containerRef }: any) => {
 
 
   useEffect(() => {
-    if ('ontouchstart' in window) {
-      // Ignore mobile
-      return;
-    }
+    // if ('ontouchstart' in window) {
+    //   // Ignore mobile
+    //   return;
+    // }
 
     if (containerRef && containerRef.current) {
       _updateSize();
