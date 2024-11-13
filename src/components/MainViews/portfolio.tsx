@@ -95,7 +95,7 @@ function Portfolio() {
                 text: "Check it out!",
                 color: "#303030"
             },
-            description: "Biblacra renders Hebrew and Greek biblical texts. There are 3 frontend Bibliacra clients: a web app, an iOS app, and an android app (android is still in testing). I used React.js for the web app and intially used React Native to build the iOS version, but ultimately rewrote it in Swift - I'm still working on an Android version. The database is a NoSQL Firestore database. Users of Bibliacra can open various texts, click on a word, and see word attributes like part of speech or gloss. In addition, users can search for words and Bibliacra queries an Algolia full text search engine and renders the results. Finally, users can sign in and opt into emails and push notifications to receive daily reading exercises.",
+            description: "Biblacra renders Hebrew and Greek biblical texts. There are 3 frontend Bibliacra clients: a web app, an iOS app, and an android app (android is still in testing). I used React.js for the web app and initially used React Native to build the iOS version, but ultimately rewrote it in Swift - I'm still working on an Android version. The database is a NoSQL Firestore database. Users of Bibliacra can open various texts, click on a word, and see word attributes like part of speech or gloss. In addition, users can search for words and Bibliacra queries an Algolia full text search engine and renders the results. Finally, users can sign in and opt into emails and push notifications to receive daily reading exercises.",
             photo: {
                 type: "image",
                 src: "https://bibliacra.com/logo512.png"
